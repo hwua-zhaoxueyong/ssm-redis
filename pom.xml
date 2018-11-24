@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hwua</groupId>
@@ -9,10 +8,9 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>ssm-shiro Maven Webapp</name>
+  <name>ssm-redis Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
-
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,7 +36,18 @@
 
 
   <dependencies>
-
+    <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-redis</artifactId>
+      <version>1.8.9.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.9.0</version>
+    </dependency>
     <!-- shiro-spring -->
     <dependency>
       <groupId>org.apache.shiro</groupId>
@@ -50,6 +59,7 @@
       <artifactId>shiro-all</artifactId>
       <version>${shiro-all.version}</version>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -57,6 +67,7 @@
       <version>1.16.20</version>
       <scope>provided</scope>
     </dependency>
+
     <!-- commons-codec -->
     <dependency>
       <groupId>commons-codec</groupId>
@@ -127,7 +138,6 @@
       <artifactId>fastjson</artifactId>
       <version>${fastjson.version}</version>
     </dependency>
-
     <!-- druid -->
     <dependency>
       <groupId>com.alibaba</groupId>
@@ -282,7 +292,7 @@
   </dependencies>
 
   <build>
-    <finalName>ssm-shiro</finalName>
+    <finalName>ssm-04-shiro</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
